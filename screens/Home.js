@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { Text, View,TouchableOpacity} from 'react-native';
-import DailyPic from '../screens/DailyPic';
-import SpaceCraft from '../screens/SpaceCraft';
-import StarMap from '../screens/StarMap';
 
 export default class HomeScreen extends Component {
     render() {
@@ -13,12 +10,50 @@ export default class HomeScreen extends Component {
                     justifyContent: "top",
                     alignItems: "center"
                 }}>
-                <Text>Home Screen!</Text>
+                <Text>Home Screen !</Text>
                 <View>
-                    <TouchableOpacity
-                        onPress = {this.props.navigation.navigate('DailyPic')}
-                    >
-                        <Text> Daily Pic </Text>
+                    <TouchableOpacity 
+                     onPress = {this.props.navigation.navigate('DailyPic')}
+                     style={{
+                        marginLeft : 100, 
+                        alignItems : 'center', 
+                        borderRadius : 10
+                        }}>
+                        <Text 
+                        style={{
+                            fontFamily : 'Apple Chancery', 
+                            fontSize : 14
+                            }}> Daily Pic </Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity 
+                     onPress={this.props.navigation.navigate('SpaceCraft')}
+                     style={{
+                        marginLeft : 100, 
+                        alignItems : 'center', 
+                        borderRadius : 10
+                        }}>
+                        <Text 
+                        style={{
+                            fontFamily : 'Apple Chancery', 
+                            fontSize : 14
+                            }}> Space Craft </Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity 
+                      onPress={this.props.navigation.navigate('StartMap')}
+                      style={{
+                        marginLeft : 100, 
+                        alignItems : 'center', 
+                        borderRadius : 10
+                        }}>
+                        <Text 
+                        style={{
+                            fontFamily : 'Apple Chancery', 
+                            fontSize : 14
+                            }}> Star Map </Text>
                     </TouchableOpacity>
                 </View>
             </View>
